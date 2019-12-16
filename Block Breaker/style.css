@@ -1,0 +1,13 @@
+#play_button{
+    background-color:olive;
+    color:white;
+    border: none;
+    padding: 15px 35px;
+    width:500px;
+    height:200px;
+}
+body{
+    background-color:burlywood;
+    text-align: center;
+    font-family: fantasy;
+}
