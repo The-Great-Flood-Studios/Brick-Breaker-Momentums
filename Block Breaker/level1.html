@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<title>Block Destroyer</title>
+        <title>Block Destroyer</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
 		<style>
 			#gameScreen {
 				border: 3px solid black;
@@ -36,7 +37,7 @@
 		</script>
 	</head>
 
-	<body onkeydown='getKeyAndMove(event)'>
+	<body id="level_1" onkeydown='getKeyAndMove(event)'>
 		<canvas id="gameScreen" width="1875" height="1050"></canvas>
 		<img id="slider" src="slider.png" alt="slider not loaded"/>
 	</body>
