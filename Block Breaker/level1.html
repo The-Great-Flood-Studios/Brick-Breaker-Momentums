@@ -12,6 +12,7 @@
 			//init object globally
 			var objImage= null;
 			function init(){
+				brick=document.getElementbyId("brick");
 				objImage=document.getElementById("slider");				
 				objImage.style.position='relative';
 				objImage.style.left='550px';
@@ -36,8 +37,8 @@
 			}
 			window.onload=init;
 		</script>
+		<img id="brick" src="Brick.png" alt="Brick not loaded"/>
 	</head>
-
 	<body  onkeydown='getKeyAndMove(event)'>
 		<canvas id="gameScreen" width="1875" height="1050"></canvas>
 		<img id="slider" src="slider.png" alt="slider not loaded"/>
