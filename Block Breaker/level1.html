@@ -10,7 +10,19 @@
 		</style>
 		<script src="p5.js"></script>
 		<script src="p5.sound.js"></script>
-		<script src=
+		<script type="text/javascript">
+		function setup(){
+			loadImage('Brick.png', drawBrick);
+		}
+
+		function draw(){
+			
+		}
+
+		function drawBrick(img){
+			image(img, 100,100);
+		}
+		</script>
 		<script type="text/javascript">
 			//init object globally
 			var objImage= null;
