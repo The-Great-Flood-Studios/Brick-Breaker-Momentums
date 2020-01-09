@@ -11,17 +11,17 @@
 		<script src="p5.js"></script>
 		<script src="p5.sound.js"></script>
 		<script type="text/javascript">
-		function setup(){
-			loadImage('Brick.png', drawBrick);
-		}
+		let img;
+     function preload() {
+      img = loadImage('Block Breaker\Brick.png');
+    }
+     function setup() {
+      image(img, 0, 0);
+    }
 
-		function draw(){
-			
-		}
+	function draw{
 
-		function drawBrick(img){
-			image(img, 50,50);
-		}
+	}
 		</script>
 		<script type="text/javascript">
 			//init object globally
