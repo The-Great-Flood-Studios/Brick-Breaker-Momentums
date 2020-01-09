@@ -11,24 +11,22 @@
 		<script src="p5.js"></script>
 		<script src="p5.sound.js"></script>
 		<script type="text/javascript">
-		function setup(){
-			loadImage('Brick.png', drawBrick);
-		}
+		//function setup(){
+			//loadImage('Brick.png', drawBrick);
+		//}
 
-		function draw(){
+		//function draw(){
 			
-		}
+		//}
 
-		function drawBrick(img){
-			image(img, 50,50;
-		}
+		//function drawBrick(img){
+			//image(img, 50,50;
+		//}
 		</script>
 		<script type="text/javascript">
 			//init object globally
 			var objImage= null;
-			var brick = null;
 			function init(){
-				brick=document.getElementbyId("brick");
 				objImage=document.getElementById("slider");				
 				objImage.style.position='relative';
 				objImage.style.left='550px';
@@ -53,7 +51,6 @@
 			}
 			window.onload=init;
 		</script>
-		<img id="brick" src="Brick.png" alt="Brick not loaded"/>
 	</head>
 	<body  onkeydown='getKeyAndMove(event)'>
 		<canvas id="gameScreen" width="1875" height="1050"></canvas>
