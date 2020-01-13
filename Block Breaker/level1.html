@@ -16,13 +16,13 @@
 		<script type="text/javascript">
 				let img;
     	 function preload() {
-		 background = loadImage('')
+		 background = loadImage('Assets/Level 1 Background.jpg');
     	 img = loadImage('Assets/Brick.png');
 	 	 img2 = loadImage('Assets/Slider.png');
     }
      function setup() {
 	  createCanvas(500,500);
-	  background()
+	  background(image(background,0,0));
 	  
     }
 
