@@ -10,51 +10,25 @@
 		</style>
 		<script src="p5.js"></script>
 		<script src="p5.sound.js"></script>
+		
+	
+		
 		<script type="text/javascript">
-		let img;
-     function preload() {
-      img = loadImage('Brick.png');
-	  img2 = loadImage('Slider.png');
+				let img;
+    	 function preload() {
+		 background = loadImage('')
+    	 img = loadImage('Assets/Brick.png');
+	 	 img2 = loadImage('Assets/Slider.png');
     }
      function setup() {
-      image(img, 100, 100);
+	  createCanvas(500,500);
+	  background()
+	  
     }
 
 	function draw(){
 		
 	}
-		</script>
-		<script type="text/javascript">
-			//init object globally
-			var objImage= null;
-			var brick= null;
-			function init(){
-				objImage=document.getElementById("slider");	
-				brick.style.position="relative";
-				brick.style.left("500px");
-				brick.style.top("-600px");
-				objImage.style.position='relative';
-				objImage.style.left='550px';
-				objImage.style.top='-600px';
-			}
-			function getKeyAndMove(e){				
-				var key_code=e.which||e.keyCode;
-				switch(key_code){
-					case 37: //left arrow key
-						moveLeft();
-						break;
-					case 39: //right arrow key
-						moveRight();
-						break;						
-				}
-			}
-			function moveLeft(){
-				objImage.style.left=parseInt(objImage.style.left)-20 +'px';
-			}
-			function moveRight(){
-				objImage.style.left=parseInt(objImage.style.left)+20 +'px';
-			}
-			window.onload=init;
 		</script>
 	</head>
 	<body  onkeydown='getKeyAndMove(event)'>
