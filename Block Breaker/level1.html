@@ -16,19 +16,20 @@
 		<script type="text/javascript">
 		let img2;
     	 function preload() {
-	 	 img2 = loadImage('Assets/Slider.png');
+	 	
     }
      function setup() {
-	  createCanvas(500,500);
-	  img.loadPixels();
+		createCanvas(500,500);
 
-	  c= img.get(image.width / 2, image.height / 2);
+		var img = loadImage('assets/Slider.png');
+
+		var Slider = createSprite(300,150);
+		Slider.addImage(img);
 	  
     }
 
 	function draw(){
-		background(c);
-		image(img, 25, 25, 50, 50);
+		
 	}
 		</script>
 	</head>
