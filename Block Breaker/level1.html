@@ -15,7 +15,8 @@
 	<body>
 		<script>
 			var Slider;
-
+			var LEFT = -5;
+			var RIGHT = 5;
 			function setup(){
 				createCanvas(500, 500);
 
@@ -23,6 +24,13 @@
 
 				Slider = createSprite(300, 150);
 				Slider.addImage(img);
+				Slider.immovable = true;
+				if(keyWentDown("a")){
+					Slider.velocity.x = LEFT;
+				}
+				if(keyWentDown("d")){
+					Slider.velocity.x = RIGHT;
+				}
 			}
 
 			function draw(){
