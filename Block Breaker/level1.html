@@ -14,25 +14,24 @@
 	
 		
 		<script type="text/javascript">
-				let img;
+		let img2;
     	 function preload() {
-		 background = loadImage('Assets/Level 1 Background.jpg');
-    	 img = loadImage('Assets/Brick.png');
 	 	 img2 = loadImage('Assets/Slider.png');
     }
      function setup() {
 	  createCanvas(500,500);
-	  background();
+	  img.loadPixels();
+
+	  c= img.get(image.width / 2, image.height / 2);
 	  
     }
 
 	function draw(){
-		
+		background(c);
+		image(img, 25, 25, 50, 50);
 	}
 		</script>
 	</head>
-	<body  onkeydown='getKeyAndMove(event)'>
-		<canvas id="gameScreen" width="1875" height="1050"></canvas>
-		<img id="slider" src="slider.png" alt="slider not loaded"/>
+	<body>
 	</body>
 </html>
