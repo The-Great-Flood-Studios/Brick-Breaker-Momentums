@@ -10,29 +10,24 @@
 		</style>
 		<script src="p5/p5.js"></script>
 		<script src="p5/addons/p5.sound.js"></script>
-		
-	
-		
-		<script type="text/javascript">
-		var Slider;
-    	 function preload() {
-	 	
-    }
-     function setup() {
-		createCanvas(500,500);
-
-		var img = loadImage('assets/Slider.png');
-
-	    Slider = createSprite(300,150);
-		Slider.addImage(img);
-	  
-    }
-
-	function draw(){
-		drawSprites();
-	}
-		</script>
+		<script src="p5/p5.play/lib/p5.play.js"></script>
 	</head>
 	<body>
+		<script>
+			var Slider;
+
+			function setup(){
+				createCanvas(500, 500);
+
+				var img = loadImage('Assets/Slider.png');
+
+				Slider = createSprite(300, 150);
+				Slider.addImage(img);
+			}
+
+			function draw(){
+				drawSprites();
+			}
+		</script>
 	</body>
 </html>
