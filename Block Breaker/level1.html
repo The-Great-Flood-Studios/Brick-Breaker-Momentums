@@ -19,12 +19,13 @@
 			var RIGHT = 10;
 			function setup(){
 				createCanvas(500, 500);
-				drawSprites();
+				
 
 				var img = loadImage('Assets/Slider.png');
 
 				Slider = createSprite(300, 150);
-				Slider.addImage(img);
+				Slider.addImage(img);				
+				drawSprites();				
 			}
 
 			function draw(){
