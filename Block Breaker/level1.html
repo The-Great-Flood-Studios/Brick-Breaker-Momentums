@@ -13,7 +13,7 @@
 			var RIGHT = 10;
 
 			function preload(){
-				background = loadImage("Assets/Andromeda_Galaxy.jpg");
+				var background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
 			}
 
 			function setup(){
@@ -28,7 +28,7 @@
 			}
 
 			function draw(){
-				background(image(background, 500,500));
+				background(background_image, 500, 500);
 				if(keyWentDown("a") == true){
 					Slider.velocity.x = -10;
 				}
