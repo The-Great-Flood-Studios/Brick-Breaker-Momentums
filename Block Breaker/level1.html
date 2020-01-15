@@ -12,6 +12,7 @@
 			var Slider;
 			var LEFT = -10;
 			var RIGHT = 10;
+			var STOP = 0;
 
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -32,10 +33,16 @@
 				background(background_image);
 				drawSprites();
 				if(keyWentDown(LEFT_ARROW) == true){
-					Slider.velocity.x = -10;
+					Slider.velocity.x = LEFT;
 				}
 				if(keyWentDown(RIGHT_ARROW) == true){
-					Slider.velocity.x = 10;
+					Slider.velocity.x = RIGHT;
+				}
+				if(keyWentUp(LEFT_ARROW) == true){
+					Slider.velocity.x = STOP;
+				}
+				if(KeyWentUp(RIGHT_ARROW) == true){
+					Slider.velocity.x = STOP;
 				}
 			}
 		</script>
