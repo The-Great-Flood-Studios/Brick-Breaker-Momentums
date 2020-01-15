@@ -13,11 +13,12 @@
 			var RIGHT = 10;
 
 			function preload(){
+				console.log("Obama");
 				let background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
 			}
 
 			function setup(){
-			
+				let background_image;
 				createCanvas(500, 500);
 				
 
@@ -29,6 +30,7 @@
 			}
 
 			function draw(){
+				let background_image;
 				background(background_image, 500, 500);
 				if(keyWentDown("a") == true){
 					Slider.velocity.x = -10;
