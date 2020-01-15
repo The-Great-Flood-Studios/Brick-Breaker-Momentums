@@ -24,12 +24,13 @@
 
 				Slider = createSprite(300, 150);
 				Slider.addImage(img);
-				Slider.immovable = true;
+				Slider.immovable = false;
 				if(keyWentDown("a") == true){
-					Slider.velocity.x = LEFT;
+					console.log(keyWentDown("a"));
+					Slider.velocity.x = -10;
 				}
 				if(keyWentDown("d") == true){
-					Slider.velocity.x = RIGHT;
+					Slider.velocity.x = 10;
 				}
 			}
 
