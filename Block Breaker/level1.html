@@ -26,15 +26,14 @@
 				Slider = createSprite(300, 150);
 				Slider.addImage(img);				
 				
-					
 			}
 
 			function draw(){
 				drawSprites();
-				if(keyWentDown("a") == true){
+				if(keyWentDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 				}
-				if(keyWentDown("d") == true){
+				if(keyWentDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = 10;
 				}
 			}
