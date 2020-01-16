@@ -23,8 +23,8 @@
 				var img = loadImage('Assets/Slider.png');
 
 				Slider = createSprite(400, 150);
-				Slider.addImage(img);				
-				
+				Slider.addImage(img);
+				Slider.immovable = true;
 			}
 
 			function draw(){
@@ -36,9 +36,6 @@
 				}
 				if(keyWentDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = RIGHT;
-				}
-				if(keyWentUp(LEFT_ARROW) == true){
-					Slider.velocity.x = Slider.previousPosition;
 				}
 			}
 		</script>
