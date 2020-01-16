@@ -37,7 +37,9 @@
 				if(keyWentDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = 5;
 				}
-				
+				if(keyWentUp(LEFT_ARROW) == true){
+					Slider.velocity.x = 0;
+				}
 			}
 		</script>
 	</body>
