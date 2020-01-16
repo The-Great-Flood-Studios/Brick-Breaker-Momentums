@@ -19,8 +19,6 @@
 
 			function setup(){
 				createCanvas(1900, 930);
-				background(background_image);
-				
 				var img = loadImage('Assets/Slider.png');
 
 				Slider = createSprite(300,400);
@@ -29,13 +27,13 @@
 
 			function draw(){
 				clear();
-				
+				background(background_image);
 				drawSprites();
 				if(keyWentDown(LEFT_ARROW) == true){
-					Slider.velocity.x = LEFT;
+					Slider.velocity.x = -5;
 				}
 				if(keyWentDown(RIGHT_ARROW) == true){
-					Slider.velocity.x = RIGHT;
+					Slider.velocity.x = 5;
 				}
 				
 			}
