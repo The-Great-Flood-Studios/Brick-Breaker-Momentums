@@ -10,6 +10,7 @@
 		<script>
 			var background_image;
 			var Slider;
+			var Ball;
 
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -17,9 +18,10 @@
 
 			function setup(){
 				createCanvas(1900, 930);
-				var ball = loadImage('Assets/Ball.png');
+				var ballimg = loadImage('Assets/Ball.png');
 				var img = loadImage('Assets/Slider.png');
 
+				Ball = createSprite(930, 600);
 				Slider = createSprite(1900 / 2, 600);
 				Slider.addImage(img);
 			}
