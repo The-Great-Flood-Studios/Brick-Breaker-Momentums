@@ -65,7 +65,7 @@
 					Slider.setSpeed(0, 180);
 				}
 				if(Ball.bounce(Slider)){
-					Ball.setSpeed(-Slider.position.y,360);
+					Ball.velocity.y = -Slider.position.y;
 				}
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0){
     				Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
