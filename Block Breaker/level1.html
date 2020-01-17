@@ -47,10 +47,10 @@
 				Ball.bounce(RIGHT_WALL);
 
 				if(keyWentDown(LEFT_ARROW) == true){
-					Slider.velocity.x = -10;
+					Slider.setSpeed(10, 180);
 				}
 				if(keyWentDown(RIGHT_ARROW) == true){
-					Slider.velocity.x = 10;
+					Slider.setSpeed(-10, 180);
 				}
 				if(keyWentUp(LEFT_ARROW) == true){
 					Slider.velocity.x = 0;
@@ -61,6 +61,12 @@
 				if(Ball.bounce(paddle)){
 					var Swing = (Ball.position.x-Slider.position.x)/3;
 					Ball.setSpeed(MAX_SPEED, Ball.getDirection()+Swing);
+				}
+				
+				function mousePressed(){
+					if(Ball.velocity.x == 0 && Ball.velocity.y == 0){
+    				Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
+					}
 				}
 			}
 		</script>
