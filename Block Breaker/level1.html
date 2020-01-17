@@ -42,6 +42,10 @@
 				clear();
 				background(background_image);
 				drawSprites();
+
+				Ball.bounce(TOP_WALL);
+				Ball.bounce(LEFT_WALL);
+				Ball.bounce(RIGHT_WALL);
 				if(keyWentDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 				}
