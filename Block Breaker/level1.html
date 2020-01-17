@@ -15,6 +15,7 @@
 			var TOP_WALL;
 			var LEFT_WALL;
 			var RIGHT_WALL;
+			var MAX_SPEED = 9;
 
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -52,12 +53,10 @@
 				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
-			}
-			if(Slider.position.x == 930){
-				Slider.position.x = 930 - 1;
-			}
-			if(Slider.position.x == 0){
-				Slider.position.x = 0 + 1;
+				if(Ball.bounce(paddle)){
+					var Swing = (Ball.position.x-Slider.position.x)/3;
+					Ball.setSpeed(MAX_SPEED, Ball.getDirection()+Swing);
+				}
 			}
 		</script>
 	</body>
