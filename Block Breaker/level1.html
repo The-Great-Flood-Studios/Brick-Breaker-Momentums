@@ -53,10 +53,10 @@
 					Slider.setSpeed(-10, 180);
 				}
 				if(keyWentUp(LEFT_ARROW) == true){
-					Slider.velocity.x = 0;
+					Slider.setSpeed(0, 180);
 				}
 				if(keyWentUp(RIGHT_ARROW) == true){
-					Slider.velocity.x = 0;
+					Slider.setSpeed(0, 180);
 				}
 				if(Ball.bounce(paddle)){
 					var Swing = (Ball.position.x-Slider.position.x)/3;
