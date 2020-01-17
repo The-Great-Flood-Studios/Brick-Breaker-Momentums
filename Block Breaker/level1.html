@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<script>
+			var score = 0;
 			var background_image;
 			var Slider;
 			var Ball;
@@ -15,6 +16,8 @@
 			var TOP_WALL;
 			var LEFT_WALL;
 			var RIGHT_WALL;
+			var ROWS = 9;
+			var COLUMNS = 16;
 
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -34,6 +37,8 @@
 				Ball.addImage(ballimg);
 				Slider.addImage(img);
 				Slider.immovable = true;
+
+				bricks = new Group();
 			}
 
 			function draw(){
@@ -59,6 +64,9 @@
 			if(Slider.position.x == 0){
 				Slider.position.x = 0 + 1;
 			}
+			/*function brickHit(ballimg, brick) {
+  				brick.remove();
+			}*/
 		</script>
 	</body>
 </html>
