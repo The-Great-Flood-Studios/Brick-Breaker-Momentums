@@ -50,21 +50,23 @@
 			function draw(){
 				clear();
 				background(background_image);
-				drawSprites();
-				Ball.setVelocity(random(1,10),random(1,10));
+				
 				if(keyWentDown(LEFT_ARROW) == true){
-					if(Slider.position.x == 930){
-						Slider.position.x == 0 + 1;
-					}else{
-						Slider.velocity.x = -10;
+					Slider.velocity.x = -10;
+					console.log(Slider.position.x);
+					if (Slider.position.x <= 20){
+						console.log(true);
+						Slider.position.x = 1700;
 					}
+
 				}
-				Ball.bounce(Slider);
+				
 				if(keyWentDown(RIGHT_ARROW) == true){
-					if(Slider.position.x == 0){
-						Slider.position.x = 930 - 1;
-					}else{
-						Slider.velocity.x = 10;
+					Slider.velocity.x = 10;
+					console.log(Slider.position.x);
+					if (Slider.position.x >= 1820){
+						console.log(true);
+						Slider.position.x = 100;
 					}
 				}
 				if(keyWentUp(LEFT_ARROW) == true){
@@ -73,11 +75,17 @@
 				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
-			}
 
-			/*function brickHit(ballimg, brick) {
-  				brick.remove();
-			}*/
+				
+				if(Slider.position.x == 930){
+					Slider.position.x = 930 - 1;
+				}
+				if(Slider.position.x == 0){
+					Slider.position.x = 0 + 1;
+				}
+
+				drawSprites();
+			}
 		</script>
 	</body>
 </html>
