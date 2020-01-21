@@ -38,24 +38,24 @@
 				clear();
 				background(background_image);
 				drawSprites();
-				if(keyDown(LEFT_ARROW) == true){
+				if(keyWentDown(LEFT_ARROW) == true){
 					if(Slider.position.x == 930){
 						Slider.position.x == 0 + 1;
 					}else{
 						Slider.velocity.x = -10;
 					}
 				}
-				if(keyDown(RIGHT_ARROW) == true){
+				if(keyWentDown(RIGHT_ARROW) == true){
 					if(Slider.position.x == 0){
 						Slider.position.x = 930 - 1;
 					}else{
 						Slider.velocity.x = 10;
 					}
 				}
-				if(keyDown(LEFT_ARROW) == false){
+				if(keyWentUp(LEFT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
-				if(keyDown(RIGHT_ARROW) == false){
+				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
 				function mousePressed(){
