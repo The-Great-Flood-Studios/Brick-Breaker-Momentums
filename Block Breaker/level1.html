@@ -49,6 +49,22 @@
 				clear();
 				background(background_image);
 				
+				if(keyIsDown(LEFT_ARROW)){
+					Slider.velocity.x = -10;
+				}
+
+				if(Slider.position.x < 200){
+					Slider.velocity.x = 0;
+				}
+				if(keyIsDown(RIGHT_ARROW)){
+					Slider.velocity.x = 10;
+				}
+
+				if(Slider.position.x > 1700){
+					Slider.velocity.x = 0;
+				}
+
+				/*
 				if(keyWentDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 					if (Slider.position.x <= 20){
@@ -76,7 +92,7 @@
 				}
 				if(Slider.position.x == 0){
 					Slider.position.x = 0 + 1;
-				}
+				}*/
 
 				drawSprites();
 			}
