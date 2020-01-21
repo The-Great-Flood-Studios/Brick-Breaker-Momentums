@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<script>
+			var score = 0;
 			var background_image;
 			var Slider;
 			var Ball;
@@ -15,7 +16,9 @@
 			var TOP_WALL;
 			var LEFT_WALL;
 			var RIGHT_WALL;
+			var MAX_SPEED = 9;
 
+			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
 			}
@@ -25,15 +28,21 @@
 				var ballimg = loadImage('Assets/Ball.png');
 				var img = loadImage('Assets/Slider.png');
 				var brick = loadImage('Assets/Brick.png');
-
-				TOP_WALL = createSprite(width/2, -WALL_THICKNESS/2, width+WALL_THICKNESS*2, WALL_THICKNESS);
-				TOP_WALL.immovable = true;
-				LEFT_WALL = createSprite(width/2, )
 				Ball = createSprite(930, 600);
+				Ball.maxSpeed = MAX_SPEED;
 				Slider = createSprite(1900 / 2, 680);
 				Ball.addImage(ballimg);
 				Slider.addImage(img);
 				Slider.immovable = true;
+
+				bricks = new Group();
+
+				/*for(var r = 0; r<ROWS; r++){
+					for(var c = 0; c<COLUMNS; c++) {
+					bricks.add(brick);
+					brick.immovable = true;
+				}
+				}*/
 			}
 
 			function draw(){
@@ -64,6 +73,7 @@
 				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
+<<<<<<< HEAD
 				
 				if(Slider.position.x == 930){
 					Slider.position.x = 930 - 1;
@@ -75,6 +85,16 @@
 				drawSprites();
 			}
 			
+=======
+				function mousePressed(){
+					
+				}
+			}
+
+			/*function brickHit(ballimg, brick) {
+  				brick.remove();
+			}*/
+>>>>>>> e2807d02f251e3a53bffdbf2e024ff15444845cc
 		</script>
 	</body>
 </html>
