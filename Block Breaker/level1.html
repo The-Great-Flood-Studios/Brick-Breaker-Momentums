@@ -75,7 +75,10 @@
 				}
 				Ball.bounce(Slider);
 				if(Ball.position.x >= 930){
-
+					Ball.velocity.x = -Ball.velocity.x;
+				}
+				if(Ball.position.x <= 0){
+					Ball.velocity.x = -Ball.velocity.x;
 				}
 				drawSprites();
 			}
