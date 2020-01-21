@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<script>
+			var score = 0;
 			var background_image;
 			var Slider;
 			var Ball;
@@ -17,6 +18,7 @@
 			var RIGHT_WALL;
 			var MAX_SPEED = 9;
 
+			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
 			}
@@ -32,6 +34,15 @@
 				Ball.addImage(ballimg);
 				Slider.addImage(img);
 				Slider.immovable = true;
+
+				bricks = new Group();
+
+				/*for(var r = 0; r<ROWS; r++){
+					for(var c = 0; c<COLUMNS; c++) {
+					bricks.add(brick);
+					brick.immovable = true;
+				}
+				}*/
 			}
 
 			function draw(){
@@ -61,6 +72,10 @@
 					Slider.velocity.x = 0;
 				}
 			}
+
+			/*function brickHit(ballimg, brick) {
+  				brick.remove();
+			}*/
 		</script>
 	</body>
 </html>
