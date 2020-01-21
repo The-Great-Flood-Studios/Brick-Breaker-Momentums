@@ -40,16 +40,16 @@
 				clear();
 				background(background_image);
 				drawSprites();
-				if(keyWentDown(LEFT_ARROW) == true){
+				if(keyDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 				}
-				if(keyWentDown(RIGHT_ARROW) == true){
+				if(keyDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = 10;
 				}
-				if(keyWentUp(LEFT_ARROW) == true){
+				if(keyDown(LEFT_ARROW) == false){
 					Slider.velocity.x = 0;
 				}
-				if(keyWentUp(RIGHT_ARROW) == true){
+				if(keyDown(RIGHT_ARROW) == false){
 					Slider.velocity.x = 0;
 				}
 			}
