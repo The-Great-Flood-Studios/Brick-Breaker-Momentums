@@ -16,8 +16,12 @@
 			var TOP_WALL;
 			var LEFT_WALL;
 			var RIGHT_WALL;
+<<<<<<< HEAD
 			var ROWS = 9;
 			var COLUMNS = 16;
+=======
+			var MAX_SPEED = 9;
+>>>>>>> 0c0ac9b70cc8b887f541aa8d51823c32694953b0
 
 			
 			function preload(){
@@ -34,6 +38,7 @@
 				TOP_WALL.immovable = true;
 				LEFT_WALL = createSprite(width/2, )
 				Ball = createSprite(930, 600);
+				Ball.maxSpeed = MAX_SPEED;
 				Slider = createSprite(1900 / 2, 680);
 				Ball.addImage(ballimg);
 				Slider.addImage(img);
@@ -53,24 +58,31 @@
 				clear();
 				background(background_image);
 				drawSprites();
-				if(keyWentDown(LEFT_ARROW) == true){
+				Ball.bounce(TOP_WALL);
+				Ball.bounce(LEFT_WALL);
+				Ball.bounce(RIGHT_WALL);
+				if(keyDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 				}
-				if(keyWentDown(RIGHT_ARROW) == true){
+				if(keyDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = 10;
 				}
-				if(keyWentUp(LEFT_ARROW) == true){
+				if(keyDown(LEFT_ARROW) == false){
 					Slider.velocity.x = 0;
 				}
-				if(keyWentUp(RIGHT_ARROW) == true){
+				if(keyDown(RIGHT_ARROW) == false){
 					Slider.velocity.x = 0;
 				}
-			}
-			if(Slider.position.x == 930){
-				Slider.position.x = 930 - 1;
-			}
-			if(Slider.position.x == 0){
-				Slider.position.x = 0 + 1;
+				if(Ball.bounce(paddle)){
+					var Swing = (Ball.position.x-Slider.position.x)/3;
+					Ball.setSpeed(MAX_SPEED, Ball.getDirection()+Swing);
+				}
+				
+				function mousePressed(){
+					if(Ball.velocity.x == 0 && Ball.velocity.y == 0){
+    				Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
+					}
+				}
 			}
 
 			/*function brickHit(ballimg, brick) {
