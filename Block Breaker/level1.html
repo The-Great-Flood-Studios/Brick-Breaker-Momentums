@@ -51,9 +51,7 @@
 				
 				if(keyWentDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
-					console.log(Slider.position.x);
 					if (Slider.position.x <= 20){
-						console.log(true);
 						Slider.position.x = 1700;
 					}
 
@@ -61,9 +59,7 @@
 				
 				if(keyWentDown(RIGHT_ARROW) == true){
 					Slider.velocity.x = 10;
-					console.log(Slider.position.x);
 					if (Slider.position.x >= 1820){
-						console.log(true);
 						Slider.position.x = 100;
 					}
 				}
