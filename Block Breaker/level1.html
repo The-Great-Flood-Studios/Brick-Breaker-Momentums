@@ -19,6 +19,7 @@
 			var ROWS = 9;
 			var COLUMNS = 16;
 
+			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
 			}
@@ -39,6 +40,13 @@
 				Slider.immovable = true;
 
 				bricks = new Group();
+
+				/*for(var r = 0; r<ROWS; r++){
+					for(var c = 0; c<COLUMNS; c++) {
+					bricks.add(brick);
+					brick.immovable = true;
+				}
+				}*/
 			}
 
 			function draw(){
@@ -64,6 +72,7 @@
 			if(Slider.position.x == 0){
 				Slider.position.x = 0 + 1;
 			}
+
 			/*function brickHit(ballimg, brick) {
   				brick.remove();
 			}*/
