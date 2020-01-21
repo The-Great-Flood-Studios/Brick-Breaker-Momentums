@@ -47,16 +47,16 @@
 				Ball.bounce(RIGHT_WALL);
 
 				if(keyWentDown(LEFT_ARROW) == true){
-					Slider.setSpeed(-10, 0);
+					Slider.velocity.x = -10;
 				}
 				if(keyWentDown(RIGHT_ARROW) == true){
-					Slider.setSpeed(10, 360);
+					Slider.velocity.x = 10;
 				}
 				if(keyWentUp(LEFT_ARROW) == true){
-					Slider.setSpeed(0, 180);
+					Slider.velocity.x = 0;
 				}
 				if(keyWentUp(RIGHT_ARROW) == true){
-					Slider.setSpeed(0, 180);
+					Slider.velocity.x = 0;
 				}
 				if(Ball.bounce(paddle)){
 					var Swing = (Ball.position.x-Slider.position.x)/3;
