@@ -17,7 +17,9 @@
 			var LEFT_WALL;
 			var RIGHT_WALL;
 			var MAX_SPEED = 9;
-
+			var ROWS = 3;
+			var COLUMNS = 10;
+			
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -27,7 +29,7 @@
 				createCanvas(1890, 930);
 				var ballimg = loadImage('Assets/Ball.png');
 				var img = loadImage('Assets/Slider.png');
-				var brick = loadImage('Assets/Brick.png');
+				var brickimg = loadImage('Assets/Brick.png');
 				Ball = createSprite(930, 600);
 				Ball.maxSpeed = MAX_SPEED;
 				Slider = createSprite(1900 / 2, 890, 275, 60);
@@ -37,11 +39,10 @@
 
 				bricks = new Group();
 
-				/*for(var r = 0; r<ROWS; r++){
+				/*for(var r = 0; r<ROWS; r++)
 					for(var c = 0; c<COLUMNS; c++) {
-					bricks.add(brick);
-					brick.immovable = true;
-				}
+					bricks.add(brickimg);
+					brickimg.immovable = true;
 				}*/
 			}
 
