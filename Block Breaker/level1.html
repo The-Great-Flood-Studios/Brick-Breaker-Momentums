@@ -32,6 +32,9 @@
 				Ball.addImage(ballimg);
 				Slider.addImage(img);
 				Slider.immovable = true;
+				function mousePressed(){
+					Ball.setVelocity(random(1,10),random(1,10));
+				}
 			}
 
 			function draw(){
@@ -58,9 +61,7 @@
 				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
 				}
-				function mousePressed(){
-					Ball.setVelocity(random(1,10),random(1,10));
-				}
+				
 			}
 		</script>
 	</body>
