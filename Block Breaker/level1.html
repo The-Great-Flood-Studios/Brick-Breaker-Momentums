@@ -26,7 +26,6 @@
 				var ballimg = loadImage('Assets/Ball.png');
 				var img = loadImage('Assets/Slider.png');
 				var brick = loadImage('Assets/Brick.png');
-				
 				Ball = createSprite(930, 600);
 				Ball.maxSpeed = MAX_SPEED;
 				Slider = createSprite(1900 / 2, 680);
@@ -39,9 +38,6 @@
 				clear();
 				background(background_image);
 				drawSprites();
-				Ball.bounce(TOP_WALL);
-				Ball.bounce(LEFT_WALL);
-				Ball.bounce(RIGHT_WALL);
 				if(keyDown(LEFT_ARROW) == true){
 					Slider.velocity.x = -10;
 				}
