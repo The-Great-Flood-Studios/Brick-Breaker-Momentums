@@ -39,16 +39,24 @@
 				background(background_image);
 				drawSprites();
 				if(keyDown(LEFT_ARROW) == true){
-					Slider.velocity.x = -10;
+					if(Slider.position.x == 930){
+						Slider.position.x == 0 + 1;
+					}else{
+						Slider.velocity.x = -10;
+					}
 				}
 				if(keyDown(RIGHT_ARROW) == true){
-					Slider.velocity.x = 10;
+					if(Slider.position.x == 0){
+						Slider.position.x = 930 - 1;
+					}else{
+						Slider.velocity.x = 10;
+					}
 				}
 				if(keyDown(LEFT_ARROW) == false){
-					Slider.velocity.x = 0;
+					
 				}
 				if(keyDown(RIGHT_ARROW) == false){
-					Slider.velocity.x = 0;
+					
 				}
 			}
 		</script>
