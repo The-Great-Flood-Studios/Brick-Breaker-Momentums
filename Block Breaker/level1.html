@@ -26,6 +26,12 @@
 			function setup(){
 				createCanvas(1890, 930);
 				var ballimg = loadImage('Assets/Ball.png');
+				var TOP_WALL = createSprite(width/2, -WALL_THICKNESS/2, width+WALL_THICKNESS*2, WALL_THICKNESS);
+				TOP_WALL.immovable = true;
+				var LEFT_WALL = createSprite(-WALL_THICKNESS/2, height/2, WALL_THICKNESS, height);
+				LEFT_WALL.immovable = true;
+				var RIGHT_WALL = createSprite(width+WALL_THICKNESS/2, height/2, WALL_THICKNESS, height);
+				RIGHT_WALL.immovable = true;
 				var img = loadImage('Assets/Slider.png');
 				var brick = loadImage('Assets/Brick.png');
 				Ball = createSprite(930, 600);
@@ -74,13 +80,10 @@
 					Slider.velocity.x = 0;
 				}
 
-				
-				if(Slider.position.x == 930){
-					Slider.position.x = 930 - 1;
-				}
-				if(Slider.position.x == 0){
-					Slider.position.x = 0 + 1;
-				}
+				Ball.bounce(TOP_WALL);
+				Ball.bounce(LEFT_WALL);
+				BALL.bounce(RIGHT_WALL);
+				Ball.bounce(Slider);
 
 				drawSprites();
 			}
