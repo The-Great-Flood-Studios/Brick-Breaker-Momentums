@@ -41,6 +41,8 @@
 				Slider.addImage(img);
 				Slider.immovable = true;
 
+				randomColor = color(random(255),random(255),random(255));
+
 				TOP_WALL = createSprite(width/2, -WALL_THICKNESS/2, width+WALL_THICKNESS*2, WALL_THICKNESS);
 				TOP_WALL.immovable = true;
 
@@ -61,7 +63,7 @@
 				for(var r = 0; r<ROWS; r++) {
 					for(var c = 0; c<COLUMNS; c++) {
 					var brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_H+BRICK_MARGIN), BRICK_W, BRICK_H);
-					brick.shapeColor = color(255, 255, 255);
+					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
 					}		
