@@ -18,12 +18,10 @@
 			var LEFT_WALL;
 			var RIGHT_WALL;
 			var MAX_SPEED = 9;
-			var ROWS = 5;
-			var COLUMNS = 45;
-			var BRICK_W = 40;
-			var BRICK_H = 20;
-			var BRICK_MARGIN = 4;
-			var SPEED = 10;
+			var ROWS = 3;
+			var COLUMNS = 10;
+			var RIGHT_SPEED = 10;
+			var LEFT_SPEED = -10;
 			
 			
 			function preload(){
@@ -81,7 +79,7 @@
 
 
 				if(keyIsDown(LEFT_ARROW)){
-					Slider.velocity.x = -SPEED;
+					Slider.velocity.x = LEFT_SPEED;
 				}
 
 				if(Slider.position.x < 100){
@@ -90,11 +88,6 @@
 				if(keyIsDown(RIGHT_ARROW)){
 					Slider.velocity.x = SPEED;
 				}
-				if(keyIsDown(UP_ARROW)){
-					SPEED++;
-				}
-				if(keyIsDown(DOWN_ARROW)){
-					SPEED--;
 				}
 				if(keyWentUp(RIGHT_ARROW) == true){
 					Slider.velocity.x = 0;
