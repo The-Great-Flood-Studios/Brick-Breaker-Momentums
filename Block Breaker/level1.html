@@ -19,6 +19,7 @@
 			var MAX_SPEED = 9;
 			var ROWS = 3;
 			var COLUMNS = 10;
+			var SPEED = 10;
 			
 			
 			function preload(){
@@ -69,14 +70,20 @@
 
 
 				if(keyIsDown(LEFT_ARROW)){
-					Slider.velocity.x = -10;
+					Slider.velocity.x = -SPEED;
 				}
 
 				if(Slider.position.x < 200){
 					Slider.velocity.x = -Slider.velocity.x;
 				}
 				if(keyIsDown(RIGHT_ARROW)){
-					Slider.velocity.x = 10;
+					Slider.velocity.x = SPEED;
+				}
+				if(keyIsDown(UP_ARROW)){
+					SPEED++;
+				}
+				if(keyIsDown(DOWN_ARROW)){
+					SPEED--;
 				}
 
 				if(Slider.position.x > 1700){
