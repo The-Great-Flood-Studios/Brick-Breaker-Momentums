@@ -68,7 +68,7 @@
 					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
-					
+					brickCounter++;
 					}		
 				}
 			}
@@ -120,6 +120,7 @@
 				function brickHit(ball, brick) {
   				console.log("h")
 				brick.remove();
+				brickCounter--;
 				}
 			
 				if(keyWentDown(' ')) {
@@ -127,6 +128,7 @@
 					Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
 			}
 			function winGame(){
+				if(brickCounter == 0)
 			}
 		}
 			
