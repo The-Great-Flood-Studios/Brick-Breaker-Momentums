@@ -92,14 +92,11 @@
 					Slider.velocity.x = RIGHT_SPEED;
 				}
 
-				
-				if(Slider.position.x == 930){
-					Slider.position.x = 930 - 1;
-				}
-				if(Slider.position.x == 0){
-					Slider.position.x = 0 + 1;
-				}
 
+				
+				if(Slider.position.x < 100){
+					Slider.velocity.x = -Slider.velocity.x;
+				}
 
 				if(Slider.position.x > 1800){
 					Slider.velocity.x = -Slider.velocity.x;
@@ -117,7 +114,7 @@
   				brick.remove();
 				}
 			
-				if(keyWentDown(SPACE_BAR)) {
+				if(keyWentDown('m')) {
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0)
 					Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
 			}
