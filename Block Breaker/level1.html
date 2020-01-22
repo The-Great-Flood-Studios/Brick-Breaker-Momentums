@@ -26,6 +26,7 @@
 			var BRICK_W = 40;
 			var BRICK_H = 20;
 			var brickCounter = 0;
+			var bricksRemoved = 0;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -120,7 +121,7 @@
 				function brickHit(ball, brick) {
   				console.log("h")
 				brick.remove();
-				brickCounter--;
+				bricksRemoved++;
 				}
 			
 				if(keyWentDown(' ')) {
@@ -128,7 +129,9 @@
 					Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
 			}
 			function winGame(){
-				if(brickCounter == 0)
+				if(){
+
+				}
 			}
 		}
 			
