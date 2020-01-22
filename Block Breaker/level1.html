@@ -60,6 +60,7 @@
 				var offsetX = width/2-(COLUMNS-1)*(BRICK_MARGIN+BRICK_W)/2;
   				var offsetY = 15;
 
+				//Yeeting bricks on screen
 				for(var r = 0; r<ROWS; r++) {
 					for(var c = 0; c<COLUMNS; c++) {
 					var brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_H+BRICK_MARGIN), BRICK_W, BRICK_H);
@@ -118,6 +119,7 @@
 				
 				drawSprites();
 
+				//Brick removal
 				function brickHit(ball, brick) {
   				brick.remove();
 				}
