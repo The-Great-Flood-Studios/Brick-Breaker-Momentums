@@ -25,6 +25,7 @@
 			var BRICK_W = 71;
 			var BRICK_H = 23;
 			var brickCounter = 0;
+			var bricksRemoved = 0;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -67,7 +68,7 @@
 					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
-					
+					brickCounter++;
 					}		
 				}
 			}
@@ -75,13 +76,14 @@
 			function draw(){
 				clear();
 				background(background_image);
-				
+
+				//Bouncing the ball around da screen tho ;)
 				Ball.bounce(TOP_WALL);
 				Ball.bounce(LEFT_WALL);
 				//Ball.bounce(BOTTOM_WALL);
 				Ball.bounce(RIGHT_WALL);
 
-
+				//Movement of the Paddle
 				if(keyIsDown(LEFT_ARROW)){
 					Slider.velocity.x = LEFT_SPEED;
 				}
@@ -124,6 +126,7 @@
 				//Brick removal
 				function brickHit(ball, brick) {
 				brick.remove();
+				bricksRemoved++;
 				}
 			
 				if(keyWentDown(' ')) {
