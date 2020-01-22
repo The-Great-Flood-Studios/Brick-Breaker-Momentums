@@ -25,6 +25,7 @@
 			var BRICK_MARGIN = 5
 			var BRICK_W = 40;
 			var BRICK_H = 20;
+			var brickCounter = 0;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -67,6 +68,7 @@
 					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
+					
 					}		
 				}
 			}
@@ -123,6 +125,9 @@
 				if(keyWentDown(' ')) {
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0)
 					Ball.setSpeed(MAX_SPEED, random(90-10, 90+10));
+			}
+			function winGame(){
+				if()
 			}
 		}
 			
