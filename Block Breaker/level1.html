@@ -22,7 +22,9 @@
 			var COLUMNS = 10;
 			var RIGHT_SPEED = 10;
 			var LEFT_SPEED = -10;
-			
+			var BRICK_MARGIN = 15
+			var BRICK_W = 40;
+			var BRICK_H = 20;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -116,7 +118,7 @@
 				function brickHit(ball, brick) {
   				brick.remove();
 				}
-			}
+			
 
 			function mousePressed() {
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0)
