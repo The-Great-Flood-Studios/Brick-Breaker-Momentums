@@ -79,6 +79,7 @@
 				Ball.bounce(LEFT_WALL);
 				//Ball.bounce(BOTTOM_WALL);
 				Ball.bounce(RIGHT_WALL);
+				Ball.bounce(bricks);
 
 
 				if(keyIsDown(LEFT_ARROW)){
@@ -113,7 +114,7 @@
 				drawSprites();
 
 				//Brick removal
-				function brickHit(ball, brick) {
+				function brickHit(ball, bricks) {
   				brick.remove();
 				}
 			
