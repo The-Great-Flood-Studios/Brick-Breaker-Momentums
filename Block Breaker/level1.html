@@ -73,16 +73,14 @@
 				}
 
 				if(Slider.position.x < 200){
-					clear();
-					Slider.velocity.x = 0;
+					Slider.velocity.x = -Slider.velocity.x;
 				}
 				if(keyIsDown(RIGHT_ARROW)){
 					Slider.velocity.x = 10;
 				}
 
 				if(Slider.position.x > 1700){
-					clear();
-					Slider.velocity.x = 0;
+					Slider.velocity.x = -Slider.velocity.x;
 				}
 				
 				if(Ball.bounce(Slider)){
