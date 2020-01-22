@@ -19,7 +19,8 @@
 			var MAX_SPEED = 9;
 			var ROWS = 3;
 			var COLUMNS = 10;
-			var SPEED = 10;
+			var RIGHT_SPEED = 10;
+			var LEFT_SPEED = -10;
 			
 			
 			function preload(){
@@ -70,7 +71,7 @@
 
 
 				if(keyIsDown(LEFT_ARROW)){
-					Slider.velocity.x = -SPEED;
+					Slider.velocity.x = LEFT_SPEED;
 				}
 
 				if(Slider.position.x < 200){
@@ -80,10 +81,18 @@
 					Slider.velocity.x = SPEED;
 				}
 				if(keyIsDown(UP_ARROW)){
-					SPEED++;
+					if(keyWentDown(LEFT_ARROW)){
+						LEFT_SPEED--;
+					}else if(keyWentDown(RIGHT_ARROW)){
+						RIGHT_SPEED++;
+					}
 				}
 				if(keyIsDown(DOWN_ARROW)){
-					SPEED--;
+					if(keyWentDown(LEFT_ARROW)){
+						LEFT_SPEED++;
+					}else if(keyWentDown(RIGHT_ARROW)){
+						RIGHT_SPEED--;
+					}
 				}
 
 				if(Slider.position.x > 1700){
