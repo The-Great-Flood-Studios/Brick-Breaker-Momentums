@@ -19,7 +19,7 @@
 			var RIGHT_WALL;
 			var MAX_SPEED = 9;
 			var ROWS = 5;
-			var COLUMNS = 42;
+			var COLUMNS = 25;
 			var RIGHT_SPEED = 10;
 			var LEFT_SPEED = -10;
 			var BRICK_MARGIN = 5
@@ -111,9 +111,9 @@
 					var swing = (Ball.position.x-Slider.position.x)/3;
 					Ball.setSpeed(MAX_SPEED, Ball.getDirection()+swing);
 				}
-				
-				Ball.bounce(bricks, brickHit);
-				
+				if(Ball.position.y >= 930){
+					setup();
+				}				
 				drawSprites();
 
 				//Brick removal
@@ -121,6 +121,7 @@
   				console.log("h")
 				brick.remove();
 				}
+				
 			
 				if(keyWentDown(' ')) {
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0)
