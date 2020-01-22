@@ -8,7 +8,6 @@
 	</head>
 	<body>
 		<script>
-			var score = 0;
 			var background_image;
 			var bricks;
 			var Slider;
@@ -19,12 +18,12 @@
 			var RIGHT_WALL;
 			var MAX_SPEED = 9;
 			var ROWS = 5;
-			var COLUMNS = 42;
+			var COLUMNS = 25;
 			var RIGHT_SPEED = 10;
 			var LEFT_SPEED = -10;
 			var BRICK_MARGIN = 5
-			var BRICK_W = 40;
-			var BRICK_H = 20;
+			var BRICK_W = 71;
+			var BRICK_H = 23;
 			var brickCounter = 0;
 			
 			function preload(){
@@ -129,7 +128,10 @@
 			function winGame(){
 			}
 		}
-			
+		//TO DO LIST
+		//edit brick for loop to have a counter, adding to a var that is the total amount of bricks by the end
+		//edit brick removal to count bricks removed
+		//once game over works, use bricks removed to display score	
 			
 		</script>
 	</body>
