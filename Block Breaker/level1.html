@@ -109,16 +109,16 @@
 					var swing = (Ball.position.x-Slider.position.x)/3;
 					Ball.setSpeed(MAX_SPEED, Ball.getDirection()+swing);
 				}
-				
-				Ball.bounce(bricks, brickHit);
-				
+				if(Ball.position.y >= 930){
+					setup();
+				}				
 				drawSprites();
 
 				//Brick removal
 				function brickHit(ball, brick) {
-  				console.log("hi")
 				brick.remove();
 				}
+				
 			
 				if(keyWentDown(' ')) {
 				if(Ball.velocity.x == 0 && Ball.velocity.y == 0)
