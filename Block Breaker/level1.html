@@ -37,6 +37,7 @@
 				var ballimg = loadImage('Assets/Ball2.png');
 				var img = loadImage('Assets/Slider.png');
 				Ball = createSprite(930, 600);
+				brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_+HBRICK_MARGIN), BRICK_W, BRICK_H);
 				Ball.maxSpeed = MAX_SPEED;
 				Slider = createSprite(1900 / 2, 890);
 				Ball.addImage(ballimg);
@@ -65,7 +66,7 @@
 				//Yeeting bricks on screen
 				for(var r = 0; r<ROWS; r++) {
 					for(var c = 0; c<COLUMNS; c++) {
-					brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_H+BRICK_MARGIN), BRICK_W, BRICK_H);
+					
 					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
