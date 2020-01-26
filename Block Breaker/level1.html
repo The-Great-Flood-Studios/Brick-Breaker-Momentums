@@ -117,7 +117,7 @@
 				if(Ball.position.y >= 900){
 					clear();
 					Slider.remove();
-					bricks.remove(bricks);
+					
 					setup();
 				}
 					
@@ -128,7 +128,7 @@
 
 				//Brick removal
 				function brickHit(ball, brick) {
-				brick.remove();
+				bricks.remove();
 				bricksRemoved++;
 				}
 			
