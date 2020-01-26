@@ -116,7 +116,8 @@
 
 				if(Ball.position.y >= 900){
 					clear();
-					removeSprites();
+					Slider.remove();
+					bricks.remove(brick);
 					setup();
 				}
 					
