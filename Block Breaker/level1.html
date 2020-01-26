@@ -26,7 +26,6 @@
 			var BRICK_H = 23;
 			var brickCounter = 0;
 			var bricksRemoved = 0;
-			var brick;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -65,7 +64,7 @@
 				//Yeeting bricks on screen
 				for(var r = 0; r<ROWS; r++) {
 					for(var c = 0; c<COLUMNS; c++) {
-					brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_H+BRICK_MARGIN), BRICK_W, BRICK_H);
+					var brick = createSprite(offsetX+c*(BRICK_W+BRICK_MARGIN), offsetY+r*(BRICK_H+BRICK_MARGIN), BRICK_W, BRICK_H);
 					brick.shapeColor = color(randomColor);
 					bricks.add(brick);
 					brick.immovable = true;
@@ -119,7 +118,7 @@
 					Slider.remove();
 					for(var r = 0; r<ROWS; r++) {
 						for(var c = 0; c<COLUMNS; c++) {
-							bricks.brick.remove();
+							bricks.remove(brick);
 					}		
 				}
 				setup();
