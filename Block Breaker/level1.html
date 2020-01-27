@@ -152,7 +152,7 @@
 				document.write("You won!");
 				document.write("<br>");
 				document.write("Bricks Removed: " + bricksRemoved);
-				document.write("<button id=1 onClick=playAgain()></button>");
+				document.write("<button id=1 onClick=" + playAgain() + ">Play Again!</button>");
 			}
 			function reset(){
 					clear();
@@ -160,8 +160,19 @@
 					bricks.removeSprites();
 					setup();
 			}
+			function lose(){
+				document.write("Game Over!");
+				document.write("<br>");
+				document.write("Bricks Removed: " + bricksRemoved);
+				ddocument.write("<button id=2 onClick=" + tryAgain() +">Play Again!</button>");
+			}
+
 			function playAgain(){
+				lives = 0;
 				reset();
+			}
+			function tryAgain(){
+
 			}
 		}
 		//TO DO LIST
