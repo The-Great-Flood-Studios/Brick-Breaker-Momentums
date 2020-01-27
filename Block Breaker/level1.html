@@ -27,6 +27,7 @@
 			var brickCounter = 0;
 			var bricksRemoved = 0;
 			var brick;
+			var lives = 0;
 			
 			function preload(){
 			 background_image = loadImage("Assets/Andromeda_Galaxy.jpg");
@@ -72,6 +73,13 @@
 					brickCounter++;
 					}		
 				}
+
+				if(lives == 3){
+					document.write("GAME OVER")
+					document.write("<br>")
+					document.write("Score: " + bricksRemoved)
+
+				}
 			}
 
 			function draw(){
@@ -115,12 +123,14 @@
 				}
 
 				if(Ball.position.y >= 900){
+					lives++
 					clear();
 					Slider.remove();
 					bricks.removeSprites();
 					setup();
 				}
-					
+				
+
 				
 				Ball.bounce(bricks, brickHit);
 				
