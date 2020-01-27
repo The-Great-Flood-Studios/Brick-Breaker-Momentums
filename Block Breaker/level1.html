@@ -124,10 +124,7 @@
 
 				if(Ball.position.y >= 900){
 					lives++
-					clear();
-					Slider.remove();
-					bricks.removeSprites();
-					setup();
+					reset();
 				}
 				
 
@@ -155,6 +152,12 @@
 				document.write("You won!");
 				document.write("<br>");
 				document.write("Bricks Removed: " + bricksRemoved);
+			}
+			function reset(){
+					clear();
+					Slider.remove();
+					bricks.removeSprites();
+					setup();
 			}
 		}
 		//TO DO LIST
