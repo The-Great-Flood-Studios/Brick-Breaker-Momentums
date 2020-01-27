@@ -152,13 +152,16 @@
 				document.write("You won!");
 				document.write("<br>");
 				document.write("Bricks Removed: " + bricksRemoved);
-				document.write("<a href=level1.html><button id=playagain_button>Play Again</button></a>");
+				document.write("<button id=1 onClick=playAgain()></button>");
 			}
 			function reset(){
 					clear();
 					Slider.remove();
 					bricks.removeSprites();
 					setup();
+			}
+			function playAgain(){
+				reset();
 			}
 		}
 		//TO DO LIST
