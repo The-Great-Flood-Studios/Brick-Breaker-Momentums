@@ -148,7 +148,6 @@
 				document.write("You won!");
 				document.write("<br>");
 				document.write("Bricks Removed: " + bricksRemoved);
-				document.write("<button id=1 onClick=" + playAgain() + ">Play Again!</button>");
 			}
 
 			
@@ -158,14 +157,6 @@
 					Slider.remove();
 					bricks.removeSprites();
 					setup();
-			}
-			function tryAgain(){
-				lives = 0;
-				reset();
-			}
-			function playAgain(){
-				lives = 0;
-				reset();
 			}
 			
 		//TO DO LIST
