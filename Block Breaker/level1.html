@@ -75,10 +75,7 @@
 				}
 
 				if(lives == 3){
-					document.write("GAME OVER")
-					document.write("<br>")
-					document.write("Bricks Destroyed: " + bricksRemoved)
-
+					lose();
 				}
 			}
 
@@ -148,7 +145,10 @@
 				win();
 			}
 
-			function win(){
+			
+		}
+
+		function win(){
 				document.write("You won!");
 				document.write("<br>");
 				document.write("Bricks Removed: " + bricksRemoved);
@@ -175,7 +175,6 @@
 				lives = 0;
 				reset();
 			}
-		}
 		//TO DO LIST
 		//edit brick for loop to have a counter, adding to a var that is the total amount of bricks by the end
 		//edit brick removal to count bricks removed
