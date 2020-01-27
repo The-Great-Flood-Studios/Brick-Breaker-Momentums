@@ -75,7 +75,10 @@
 				}
 
 				if(lives == 3){
-					lose();
+				document.write("Game Over!");
+				document.write("<br>");
+				document.write("Bricks Removed: " + bricksRemoved);
+				document.write("<button id=2 onClick=" + tryAgain() +">Play Again!</button>");
 				}
 			}
 
@@ -141,17 +144,17 @@
 			}
 
 			if(brickCounter == bricksRemoved){
-				win();
+				document.write("You won!");
+				document.write("<br>");
+				document.write("Bricks Removed: " + bricksRemoved);
+				document.write("<button id=1 onClick=" + playAgain() + ">Play Again!</button>");
 			}
 
 			
 		}
 
 		function win(){
-				document.write("You won!");
-				document.write("<br>");
-				document.write("Bricks Removed: " + bricksRemoved);
-				document.write("<button id=1 onClick=" + playAgain() + ">Play Again!</button>");
+				
 			}
 			function reset(){
 					clear();
@@ -160,20 +163,8 @@
 					setup();
 			}
 			function lose(){
-				document.write("Game Over!");
-				document.write("<br>");
-				document.write("Bricks Removed: " + bricksRemoved);
-				document.write("<button id=2 onClick=" + tryAgain() +">Play Again!</button>");
-			}
-
-			function playAgain(){
-				lives = 0;
-				reset();
-			}
-			function tryAgain(){
-				lives = 0;
-				reset();
-			}
+				
+			
 		//TO DO LIST
 		//edit brick for loop to have a counter, adding to a var that is the total amount of bricks by the end
 		//edit brick removal to count bricks removed
